@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Application — Founder Ventures</title>
+<meta name="description" content="Submit your team application to Founder Ventures. Teams of two or more founders aged 14–28.">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://founderventures.org/application/">
+<meta property="og:url" content="https://founderventures.org/application/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Founder Ventures">
+<meta property="og:title" content="Application — Founder Ventures">
+<meta property="og:description" content="Submit your team application to Founder Ventures. Teams of two or more founders aged 14–28.">
+<meta property="og:image" content="https://founderventures.org/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Application — Founder Ventures">
+<meta name="twitter:description" content="Submit your team application to Founder Ventures. Teams of two or more founders aged 14–28.">
+<meta name="twitter:image" content="https://founderventures.org/assets/og-image.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/site.js" defer></script>
+</head>
+<body data-page="application">
+<div class="progress" id="progress"></div>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="Founder Ventures home"><img src="../assets/img/logo.png" alt="Founder Ventures" width="600" height="123"></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../about/" data-link="about">About</a>
+      <a href="../portfolio/" data-link="portfolio">Portfolio</a>
+    </nav>
+    <div class="nav-right">
+      <a href="../apply/" class="nav-cta-text">Apply for 2026 batch</a>
+      <a href="../apply/" class="btn btn-sm">Apply</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="../" data-link="home"><small>01</small>Home</a>
+    <a href="../about/" data-link="about"><small>02</small>About</a>
+    <a href="../portfolio/" data-link="portfolio"><small>03</small>Portfolio</a>
+    <a href="../apply/" data-link="apply"><small>04</small>Apply</a>
+  </nav>
+  <div class="mmenu-foot">
+    <p>Applications are open year-round for the 2026 batch.</p>
+    <a href="../apply/" class="btn btn-wide">Apply for 2026 batch <span class="arr">→</span></a>
+  </div>
+</div>
+
+<main id="main">
+<div class="page active" data-page="application">
+  <section class="page-head" style="padding-bottom:10px">
+    <div class="wrap">
+      <div class="eyebrow" data-reveal>Team application</div>
+      <h1 class="h1 split" data-reveal="fade"><span class="ln"><span>Application</span></span></h1>
+      <p class="lead" data-reveal style="margin-top:20px;--d:.2s">Fields marked <span class="req-star">*</span> are required. Teams need at least 2 members.</p>
+    </div>
+  </section>
+  <form class="wrap" id="appForm" novalidate>
+    <div class="draft-bar" id="draftBar" hidden>
+      <span><b>Draft restored</b> from <span id="draftTime"></span>. Please re-attach your pitch deck before submitting.</span>
+      <button type="button" id="draftClear">Discard draft</button>
+    </div>
+    <div class="form-sec">
+      <div id="members"></div>
+      <div class="add-row"><button type="button" class="btn btn-sm" id="addMember">+ Add more members</button></div>
+    </div>
+
+    <div class="form-sec">
+      <div class="form-sec-head"><h2>Project Information</h2></div>
+      <div class="track-pick">
+        <div class="lbl">I am applying to the<small>(select one)</small></div>
+        <button type="button" class="opt" aria-pressed="false" data-track="business">Business Venture Track</button>
+        <button type="button" class="opt" aria-pressed="false" data-track="nonprofit">Nonprofit Organization Track</button>
+      </div>
+      <input type="hidden" name="track" id="trackInput">
+      <div class="fgrid">
+        <div class="field"><label for="p-name">Business/NGO name<span class="req-star">*</span></label><input id="p-name" name="org_name" required></div>
+        <div class="field"><label for="p-date">Date founded</label><input id="p-date" name="date_founded" type="date"></div>
+        <div class="field"><label for="p-country">Country of incorporation (optional)</label><input id="p-country" name="country"></div>
+        <div class="field"><label for="p-size"># of members/employees</label><input id="p-size" name="team_size" type="number" min="2" inputmode="numeric"></div>
+        <div class="field full"><label for="p-sum">1–2 sentence summary of your business or NGO<span class="req-star">*</span></label><textarea id="p-sum" name="summary" rows="1" required></textarea></div>
+      </div>
+    </div>
+
+    <div class="form-sec">
+      <div id="guardians"></div>
+      <div class="add-row"><button type="button" class="btn btn-sm" id="addGuardian">+ Add more guardians</button></div>
+    </div>
+
+    <div class="form-sec">
+      <div class="form-sec-head"><h2>Pitch deck<span class="req-star">*</span><small>Upload your completed pitch deck using your track's template. PDF, PowerPoint or Keynote, up to 20 MB.</small></h2></div>
+      <label class="upload" id="upload">
+        <input type="file" id="file" name="pitch_deck" accept=".pdf,.ppt,.pptx,.key">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3"/></svg>
+        <span id="fileLabel">Click to upload a file</span>
+        <small>or drag and drop it here</small>
+      </label>
+    </div>
+
+    <div class="form-sec">
+      <label class="check" id="consentRow">
+        <input type="checkbox" id="consent" name="consent">
+        <span class="box" aria-hidden="true"></span>
+        <span>I confirm the information in this application is accurate, every team member is aged 14–28, and a parent or guardian has agreed to this application for any member under 18. Founder Ventures will use these details only to review our application.<span class="req-star">*</span></span>
+      </label>
+      <div class="hp" aria-hidden="true"><label>Website <input type="text" id="hp" name="website" tabindex="-1" autocomplete="off"></label></div>
+    </div>
+
+    <div class="submit-row"><button type="button" class="btn btn-ghost" id="saveDraft">Save draft</button><button type="submit" class="btn" id="submitBtn"><span class="lbl">Submit application</span> <span class="arr">→</span></button></div>
+  </form>
+
+  <section class="wrap app-done" id="appDone" hidden>
+    <div class="done-mark" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <h2 class="h2">Application <em>received</em></h2>
+    <p class="lead">Thank you for applying to Founder Ventures. Your reference number is <b id="doneId"></b>.</p>
+    <p class="lead" id="doneMail">We've sent a confirmation to your team's email addresses. Our team reviews applications on a rolling basis and will be in touch by email about next steps.</p>
+    <div class="hero-actions" style="margin-top:34px"><a href="../" class="btn">Back to home <span class="arr">→</span></a><a href="../portfolio/" class="btn btn-ghost">View portfolio</a></div>
+  </section>
+</div>
+</main>
+
+<footer class="footer vc-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <p class="foot-tag">Backing young founders who turn bold ideas into real-world impact.</p>
+        <a href="../apply/" class="btn btn-sm">Apply for 2026 batch <span class="arr">→</span></a>
+      </div>
+      <nav class="foot-col" aria-label="Footer"><span>Navigate</span><a href="../">Home</a><a href="../about/">About</a><a href="../portfolio/">Portfolio</a><a href="../apply/">Apply</a></nav>
+      <div class="foot-col"><span>Tracks</span><a href="../apply/">Business Venture</a><a href="../apply/">Nonprofit Organization</a><a href="../application/">Start application</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Founder Ventures</span><span>Nonprofit venture fund · Returns reinvested</span></div>
+  </div>
+</footer>
+
+<template id="ctaTpl">
+  <div class="wrap cta-grid" style="position:relative">
+    <div>
+      <div class="eyebrow dark" data-reveal>Applications open year-round</div>
+      <h2 class="h2 display-cta split" data-reveal="fade"><span class="ln"><span>Join the movement.</span></span><span class="ln"><span style="--i:1"><em>Become a Founder.</em></span></span></h2>
+    </div>
+    <div>
+      <p class="lead" data-reveal style="--d:.15s">Founder Ventures invites you to join a community of like-minded individuals who are not just dreaming but actively reshaping the future. Together, we can create a world where bold ideas lead to bold actions and where every founder has the opportunity to make a lasting impact.</p>
+      <div data-reveal style="--d:.25s"><a href="../apply/" class="btn btn-dark">Apply Now <span class="arr">→</span></a></div>
+    </div>
+  </div>
+</template>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

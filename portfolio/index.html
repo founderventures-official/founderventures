@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio — Founder Ventures</title>
+<meta name="description" content="Startups, social ventures and NGOs backed by Founder Ventures across the 2023, 2024 and 2026 batches.">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://founderventures.org/portfolio/">
+<meta property="og:url" content="https://founderventures.org/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Founder Ventures">
+<meta property="og:title" content="Portfolio — Founder Ventures">
+<meta property="og:description" content="Startups, social ventures and NGOs backed by Founder Ventures across the 2023, 2024 and 2026 batches.">
+<meta property="og:image" content="https://founderventures.org/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Portfolio — Founder Ventures">
+<meta name="twitter:description" content="Startups, social ventures and NGOs backed by Founder Ventures across the 2023, 2024 and 2026 batches.">
+<meta name="twitter:image" content="https://founderventures.org/assets/og-image.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/site.js" defer></script>
+</head>
+<body data-page="portfolio">
+<div class="progress" id="progress"></div>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="Founder Ventures home"><img src="../assets/img/logo.png" alt="Founder Ventures" width="600" height="123"></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../about/" data-link="about">About</a>
+      <a href="../portfolio/" data-link="portfolio">Portfolio</a>
+    </nav>
+    <div class="nav-right">
+      <a href="../apply/" class="nav-cta-text">Apply for 2026 batch</a>
+      <a href="../apply/" class="btn btn-sm">Apply</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="../" data-link="home"><small>01</small>Home</a>
+    <a href="../about/" data-link="about"><small>02</small>About</a>
+    <a href="../portfolio/" data-link="portfolio"><small>03</small>Portfolio</a>
+    <a href="../apply/" data-link="apply"><small>04</small>Apply</a>
+  </nav>
+  <div class="mmenu-foot">
+    <p>Applications are open year-round for the 2026 batch.</p>
+    <a href="../apply/" class="btn btn-wide">Apply for 2026 batch <span class="arr">→</span></a>
+  </div>
+</div>
+
+<main id="main">
+<div class="page active" data-page="portfolio">
+  <section class="page-head">
+    <div class="wrap">
+      <div class="eyebrow" data-reveal>Companies & organizations we back</div>
+      <h1 class="h1 split" data-reveal="fade"><span class="ln"><span>Portfolio</span></span></h1>
+      <div class="filter" id="filter" data-reveal style="--d:.2s" role="group" aria-label="Filter by batch">
+        <button class="on" data-f="all">All batches</button>
+        <button data-f="2026">2026</button>
+        <button data-f="2024">2024</button>
+        <button data-f="2023">2023</button>
+      </div>
+    </div>
+  </section>
+  <div class="wrap" id="batches" style="padding-bottom:clamp(60px,8vw,120px)"></div>
+</div>
+</main>
+
+<footer class="footer vc-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <p class="foot-tag">Backing young founders who turn bold ideas into real-world impact.</p>
+        <a href="../apply/" class="btn btn-sm">Apply for 2026 batch <span class="arr">→</span></a>
+      </div>
+      <nav class="foot-col" aria-label="Footer"><span>Navigate</span><a href="../">Home</a><a href="../about/">About</a><a href="../portfolio/">Portfolio</a><a href="../apply/">Apply</a></nav>
+      <div class="foot-col"><span>Tracks</span><a href="../apply/">Business Venture</a><a href="../apply/">Nonprofit Organization</a><a href="../application/">Start application</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Founder Ventures</span><span>Nonprofit venture fund · Returns reinvested</span></div>
+  </div>
+</footer>
+
+<template id="ctaTpl">
+  <div class="wrap cta-grid" style="position:relative">
+    <div>
+      <div class="eyebrow dark" data-reveal>Applications open year-round</div>
+      <h2 class="h2 display-cta split" data-reveal="fade"><span class="ln"><span>Join the movement.</span></span><span class="ln"><span style="--i:1"><em>Become a Founder.</em></span></span></h2>
+    </div>
+    <div>
+      <p class="lead" data-reveal style="--d:.15s">Founder Ventures invites you to join a community of like-minded individuals who are not just dreaming but actively reshaping the future. Together, we can create a world where bold ideas lead to bold actions and where every founder has the opportunity to make a lasting impact.</p>
+      <div data-reveal style="--d:.25s"><a href="../apply/" class="btn btn-dark">Apply Now <span class="arr">→</span></a></div>
+    </div>
+  </div>
+</template>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
